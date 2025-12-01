@@ -1,0 +1,42 @@
+nop
+addi $11, $0, 3
+addi $15, $0, 4
+
+lb $1, 0($10)
+nop
+nop
+sub $12, $11, $10
+nop
+add $12, $12, $15
+sb $1, 0($12)
+addi $10, $10, 1
+nop
+sub $13, $10, $31
+nop
+bne $13, $0, 4
+nop
+
+addi $8, $0, 1
+add $10, $0, $0
+nop
+
+lb $1, 0($10)
+nop
+nop
+add $12, $10, $15
+add $0, $0, $0
+lb $2, 0($12)
+nop
+nop
+bne $1, $2, 68
+nop
+addi $10, $10, 1
+nop
+sub $13, $10, $31
+nop
+bne $13, $0, 32
+nop
+j 72
+nop
+
+add $8, $0, $0
